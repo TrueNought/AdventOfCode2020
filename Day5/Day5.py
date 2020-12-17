@@ -71,10 +71,10 @@ def main():
     with open('day5input.txt', 'r') as file:
         passes = file.read().splitlines()
 
-    ids = []
+    ids = set()
 
     for item in passes:
-        ids.append(calc_id(item))
+        ids.add(calc_id(item))
     lowest, highest = min(ids), max(ids)
 
     print(highest)
